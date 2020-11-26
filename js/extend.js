@@ -3,7 +3,7 @@ if (findActiveMq()) {
   const loaderUrl = chrome.extension.getURL('loader.gif');
   if (findDLQHeading()) {
     findDLQHeading().innerHTML += "<a href='#' id='active_mq_retry_all_button' style='float:right'>Retry All</a>";
-    findDLQHeading().innerHTML += "<img id='active_mq_retry_loader' style='float:right;display: none; width: 20px'>Retry All</img>";
+    findDLQHeading().innerHTML += "<img id='active_mq_retry_loader' style='float:right;display: none; width: 20px'>";
     document.getElementById('active_mq_retry_loader').src = loaderUrl;
     bindRetryAll();
   }
