@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Retry All (ACTIVE MQ) DLQ Jobs",
+  "version": "1.0.0",
+  "minimum_chrome_version": "80",
+  "icons": {
+    "16": "assets/icons/main/16.png",
+    "32": "assets/icons/main/32.png",
+    "48": "assets/icons/main/48.png"
+  },
+  "description": "Gives you a retry button to retry all Dead Letter Queue Jobs",
+  "homepage_url": "https://github.com/rishabhrpg",
+  "short_name": "Retry All Dead Letter Queue (Active MQ)",
+  "permissions": [
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "all_frames": true,
+      "js": [
+        "js/extend.js"
+      ],
+      "match_about_blank": false,
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "web_accessible_resources": [
+    "assets/*",
+    "css/*",
+    "js/*",
+    "loader.gif"
+  ]
+}
